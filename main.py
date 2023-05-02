@@ -42,6 +42,6 @@ def sec_tree_con_test(sec__tre, length, name):
 if __name__ == '__main__':
     while True:
         ascii_value.link()
-        connection_test(first_tree, ascii_value.link())
+        connection_test(first_tree,name)
         printing(sec__tree)
         third_tree.third_insertion()

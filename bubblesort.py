@@ -5,9 +5,9 @@ def bubblesort(list):
 
         for j in range(0, len(list) - i - 1):
 
-            if list[j] > list[j + 1]:
-                temp = list[j]
-                list[j] = list[j + 1]
-                list[j + 1] = temp
-    return list
+            if list*[j] > node.store[j + 1]:
+                temp = [j]
+                node.store[j] = node.store[j + 1]
+                node.store[j + 1] = temp
+    return node.store
 #print(list)

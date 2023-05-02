@@ -38,8 +38,5 @@ for i in range(len(first_part)):
 for i in range(len(sec_part)):
 
     tree = insertion(sec_part[i],tree)
-
-#printing(tree)
-
 def get_tree():
     return tree
