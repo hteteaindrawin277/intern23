@@ -1,4 +1,3 @@
-
 import bubblesort
 class Node:
     def __init__(self):
@@ -79,7 +78,6 @@ def search_sec_data(node: Node, name: str):
     if node.data == len(name):
         if not node.store:return None
         print(node.store)
-        s=bubb
         return node.store[node.store.index(name)]
     elif node.data < len(name):
         return search_sec_data(node.right, name)

@@ -4,7 +4,6 @@ def jump_search(list,key):
     n = len(list)                          # Length of the array
     m = int(math.sqrt(n))               # Step length
     i = 0                               # Starting interval
-
     while i != len(list)-1 and list[i] < key:
 
         if list[i+m-1] == key:            # Found the search key
