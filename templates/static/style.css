@@ -2,8 +2,16 @@ h1{
 
     color:pink;
     background: black;
+    text-align: center;
+
 }
-p{
-    color:green;
-    background: white;
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color:red;
+}
+body {
+
+  background-color: lightblue;
+  font-family: verdana;
 }
