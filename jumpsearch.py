@@ -1,7 +1,7 @@
 import math
 
 
-def jumpSearch(arr, , n):
+def jumpSearch(arr, step, n):
     # Finding block size to be jumped
     step = math.sqrt(n)
 
