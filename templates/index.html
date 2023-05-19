@@ -5,7 +5,7 @@
 body {
         font-family: "Roboto", sans-serif;
         font-size: 18px;
-        background-color: #fdfdfd;
+        background-color:#fffeee;
     }
 
     .head_text {
@@ -22,7 +22,7 @@ body {
 <header class="masthead">
     <div class="overlay"></div>
     <div class="container">
-        <div class="row bg-secondary">
+        <div class="row">
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to my awesome Blog </h3>
@@ -35,7 +35,6 @@ body {
 </header>
 <div class="container">
     <div class="row">
-        <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 left">
             {% for post in post_list %}
             <div class="card mb-4">
@@ -43,7 +42,7 @@ body {
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
                     <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                    <a href="{% url 'post_detail' post.id  %}" class="btn btn-primary">Read More &rarr;</a>
                 </div>
             </div>
             {% endfor %}

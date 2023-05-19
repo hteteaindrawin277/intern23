@@ -2,11 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-STATUS = ((0,"Draft"),(1,"Publish")
+STATUS = ((0,"Draft"),(1,"Published")
 )
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    img=models.ImageField(default='',upload_to='images/')
+    image=models.ImageField(null=True,blank=True,default='some string',upload_to='images/')
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
@@ -20,10 +20,9 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-'''class Image(models.Model):
-    title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images')
+class PostImage(models.Model):
+    post=models.ForeignKey(Post,default=None,on_delete=models.CASCADE)
+    images = models.FileField(upload_to='images/')
 
     def __str__(self):
-        return self.title
-        '''
+        return self.post.title
